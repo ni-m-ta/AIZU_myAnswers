@@ -1,0 +1,5 @@
+https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_8_A
+Q:Write a program which converts uppercase/lowercase letters to lowercase/uppercase for a given string.
+A:
+S=input()
+print(S.swapcase())
