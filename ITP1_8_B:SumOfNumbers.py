@@ -1,3 +1,5 @@
+#Write a program which reads an integer and prints sum of its digits.
+
 num_list=[]
 ans_list=[]
 
