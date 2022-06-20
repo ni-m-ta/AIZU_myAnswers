@@ -1,17 +1,9 @@
-#Write a program which reads a word W and a text T, and prints the number of word W which appears in text T
+#Write a program which finds a pattern p in a ring shaped text s.
 
-w=input()
-words_list=[]
-count=0
+s=input()
+p=input()
 
-while True:
-    words=list(map(str,input().split()))
-    if 'END_OF_TEXT' in words:
-        break
-    words_list+=words
-
-for i in range(len(words_list)):
-    if w==words_list[i].lower():
-        count+=1
-
-print(count)
+if p in s*2:
+    print('Yes')
+else:
+    print('No')
