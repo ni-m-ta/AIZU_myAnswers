@@ -3,6 +3,8 @@
 words_list=[]
 num_list=[]
 shuffle_list=[]
+shuffledWords_list=[]
+times=0
 
 while True:
     tmpnum_list=[]
@@ -15,8 +17,13 @@ while True:
     for i in range(num):
         tmpnum_list.append(int(input()))
     shuffle_list.append(tmpnum_list)
+    times+=1
 
-for i in range(len(words_list)):
-    print(words_list[i])
-    print(num_list[i])
-    print(shuffle_list[i])
+for i in range(times):
+    for ii in range(num_list[i]):
+        words_list[i]+=words_list[i][:shuffle_list[i][ii]]
+        words_list[i]=words_list[i][shuffle_list[i][ii]:]
+    shuffledWords_list.append(words_list[i])
+
+for i in range(times):
+    print(shuffledWords_list[i])
