@@ -1,18 +1,23 @@
-n = int(input())
-buils = []
+n = int(input()) 
+field = [[0 for i in range(20)] for j in range(15)]
 for i in range(n):
-    buil = list(map(int, input().split()))
-    buils.append(buil)
+    b,f,r,v = map(int, input().split())
+    h = (b-1)*4 + f-1
+    w = r*2 - 1
+    n = v
+    field[h][w] += n
 
-for i in range(1,5):
-    for ii in range(1,4):
-        for iii in range(1,11):
-            if iii == 10:
-                print('0')
+for y in range(15):
+    for x in range(20):
+        if y%4 == 3:
+            print('#',end='')
+        else:
+            if x%2 == 0:
+                print(' ',end='')
             else:
-                print('0',end=' ')
-    if i != 4:
-        print('#'*20)                 
+                print(field[y][x],end='')
+    print()
+       
                             
 
                         
